@@ -2,6 +2,7 @@ from ledger_entry import LedgerEntry
 from stock_purchase import StockPurchase
 
 #big stuff here 
+# also test this 
 class StockLedger():
     
     def __init__(self): 
