@@ -26,4 +26,7 @@ class LedgerEntry():
         temp = self.LDofStocks.display()
         return temp #list of the linkeddeque data objects
     
+    def is_empty(self):
+        return self.LDofStocks.get_front() == None 
+    
         

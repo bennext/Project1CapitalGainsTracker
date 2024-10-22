@@ -55,8 +55,13 @@ class StockLedger():
                     self.List_of_LedgerEntry_Objects[index].remove_purchase()
                     shares_sold -= 1
 
-                if self.List_of_LedgerEntry_Objects[index] == None:
+                print("before checking")
+                #self.List_of_LedgerEntry_Objects == None: #
+                #if  #self.List_of_LedgerEntry_Objects[index] == None:
+                if self.List_of_LedgerEntry_Objects[index].is_empty():
+                    print ("after checking but before poping ", self.List_of_LedgerEntry_Objects)
                     self.List_of_LedgerEntry_Objects.pop(index)
+                    print("after poping ", self.List_of_LedgerEntry_Objects)
                 return 
         #TODO add checking for the other fields 
             
