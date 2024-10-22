@@ -84,7 +84,7 @@ class LinkedDeque():
             return ["empty"]
         
         while it != None:
-            print (it.data)
+            #print (it.data)
             alist.append(it.data)
             it = it.get_next_node()
         #self.head = holdHead
