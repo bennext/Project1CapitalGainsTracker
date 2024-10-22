@@ -49,8 +49,14 @@ class StockLedger():
         for anEntry in self.List_of_LedgerEntry_Objects:
             index += 1
             if   anEntry.equals(stock_symbol):
-                self.List_of_LedgerEntry_Objects[index].remove_purchase()
-                self.List_of_LedgerEntry_Objects.pop(index)
+
+                # loop this share sold times
+                while shares_sold > 0: 
+                    self.List_of_LedgerEntry_Objects[index].remove_purchase()
+                    shares_sold -= 1
+
+                if self.List_of_LedgerEntry_Objects[index] == None:
+                    self.List_of_LedgerEntry_Objects.pop(index)
                 return 
         #TODO add checking for the other fields 
             
